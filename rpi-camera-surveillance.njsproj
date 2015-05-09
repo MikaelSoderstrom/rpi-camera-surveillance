@@ -35,6 +35,7 @@
     <Compile Include="camera\picture.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
+    <Content Include=".gitignore" />
     <Content Include="package.json" />
     <Content Include="public\index.html" />
     <Content Include="README.md" />

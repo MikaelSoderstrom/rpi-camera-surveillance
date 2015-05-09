@@ -10,6 +10,10 @@ router.get('/', function (req, res) {
 });
 
 router.get('/latest.jpg', function (req, res) {
+    res.header('Cache-Control', 'no-cache, no-store, must-revalidate');
+    res.header('Pragma', 'no-cache');
+    res.header('Expires', 0);
+
     picture(function (filename) {
         //if (filename.charAt(filename.length - 1) === '~') {
         //    filename = filename.substring(0, filename.length - 1);
