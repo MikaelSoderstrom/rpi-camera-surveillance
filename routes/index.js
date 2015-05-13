@@ -1,4 +1,5 @@
 ﻿var fs = require('fs');
+var path = require('path');
 var express = require('express');
 var picture = require('../camera/picture.js');
 
@@ -19,7 +20,7 @@ router.get('/latest.jpg', function (req, res) {
         //    filename = filename.substring(0, filename.length - 1);
         //}
         
-        var img = fs.readFileSync('pictures/' + filename);
+        var img = fs.readFileSync(path.join(__dirname, '../pictures/') + filename);
         res.end(img, 'binary');
     });
 });

@@ -1,9 +1,10 @@
-﻿var RaspiCam = require('raspicam');
+﻿var path = require('path');
+var RaspiCam = require('raspicam');
 
 module.exports = function (callback) {
     var camera = new RaspiCam({
         mode: 'photo',
-        output: 'pictures/' + (new Date().toISOString()) + '.jpg',
+        output: path.join(__dirname, '../pictures/') + (new Date().toISOString()) + '.jpg',
         rotation: 180
     });
     
